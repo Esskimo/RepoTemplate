@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * Name: init.php
+ * Project: Initial creation of classes and files
+ *
+ * Created by: Jakub Štěrba
+ * Created on: 14.05.2019 13:04
+ */
+
 mb_internal_encoding("UTF-8");
 date_default_timezone_set("Europe/Prague");
 
@@ -10,8 +19,8 @@ ini_set('log_errors', 'On');
 ini_set('error_log', 'inc/errors.log');
 
 // Register environment variables
-if (file_exists(__ROOT__ . __DIR__  . "/env/env.php")) {
-    include(__ROOT__ . __DIR__ . "/env/env.php");
+if (file_exists(__ROOT__ . "/env/env.php")) {
+    include(__ROOT__ . "/env/env.php");
 }
 if (!function_exists('env')) {
     function env($key, $default = null)
@@ -28,7 +37,7 @@ if (!function_exists('env')) {
 // Autoload classes
 spl_autoload_register(
     function ($class) {
-        $path = __ROOT__ . __DIR__ . "/inc/" . $class . ".class.php";
+        $path = __ROOT__ . "/inc/classes/" . $class . ".class.php";
         if (file_exists($path) and filesize($path) > 0) {
             require_once($path);
         } else {
