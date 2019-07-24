@@ -2,6 +2,9 @@
 
 > One Paragraph of project description goes here
 
+![MIT](https://img.shields.io/github/license/Esskimo/RepoTemplate.svg)
+![Repo Size](https://img.shields.io/github/repo-size/Esskimo/RepoTemplate.svg)
+
 ## Prerequisites
 
 What things you need to install the software and how to install them
